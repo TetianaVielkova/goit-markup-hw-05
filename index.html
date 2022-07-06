@@ -19,7 +19,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <a class="current site-logo" href="index.html">Web<span class="logo-black">Studio</span></a>
+        <a class="site-logo" href="index.html">Web<span class="logo-black">Studio</span></a>
         <nav class="site-nav">
           <ul class="list nav-list">
             <li class="nav-item">
@@ -55,7 +55,16 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-          <button class="button-hero" type="button">Заказать услугу</button>
+          <button class="button-hero" type="button" data-modal-open>Заказать услугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="button-modal-close" data-modal-close aria-label="Закрыть">
+                <svg class="icon-close" width="11" height="11">
+                  <use href="./images/svg/icon-close.svg"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section">
@@ -71,7 +80,7 @@
                 <h3 class="advantages-subtitle">внимание к деталям</h3>
                 <p class="advantages-text">
                   Идейные соображения, а также начало повседневной работы по
-                  формированию позиции.gukygtkuylk
+                  формированию позиции.
                 </p>
               </li>
               <li class="advantages-item">
@@ -118,13 +127,22 @@
           <h2 class="title services-title">Чем мы занимаемся</h2>
           <ul class="list services-list">
             <li class="services-item">
-              <img src="./images/img1.jpg" alt="Программирование" width="370" />
+              <div class="services-position" >
+                <img src="./images/img1.jpg" alt="Программирование" width="370" />
+                <h2 class="services-title-img">десктопные приложения</h2>
+              </div>
             </li>
             <li class="services-item">
-              <img src="./images/img2.jpg" alt="Прототипирование" width="370" />
+              <div class="services-position" >
+                <img src="./images/img2.jpg" alt="Прототипирование" width="370" />
+                <h2 class="services-title-img">мобильные приложения</h2>
+              </div>
             </li>
             <li class="services-item">
-              <img src="./images/img3.jpg" alt="3Д моделирование" width="370" />
+              <div class="services-position" >
+                <img src="./images/img3.jpg" alt="3Д моделирование" width="370" />
+                <h2 class="services-title-img">дизайнерские решения</h2>
+              </div>
             </li>
           </ul>
         </div>
@@ -338,7 +356,7 @@
       <div class="container">
         <div class="footer-column">
           <div class="address-footer">
-            <a class="link site-logo logo-footer" href="index.html">Web<span class="current current-footer">Studio</span></a>
+            <a class="link site-logo logo-footer" href="index.html">Web<span class="current-footer">Studio</span></a>
             <address class="address">
               <ul class="list footer-list">
                 <li class="footer-item">
@@ -391,5 +409,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
